@@ -52,7 +52,6 @@ class Word {
   
     @Override
     public String toString() {
-        
         return this.wordTxt+", N="+this.WordN+", "+this.getNeatPerc()+".";
     }
     

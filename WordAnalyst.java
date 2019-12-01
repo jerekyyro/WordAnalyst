@@ -96,18 +96,18 @@ public class WordAnalyst {
 
     // integrate this!
     public boolean saveWordList(ArrayList<Word> words, File tiednimi) {
-        boolean pal = true;
-        try (PrintWriter kirjoittaja = new PrintWriter(tiednimi)) {
+        boolean result = true;
+        try (PrintWriter writer = new PrintWriter(tiednimi)) {
                 for (Word s : words) {
                     String rivi = s.toString();
-                    kirjoittaja.println(rivi);
+                    writer.println(rivi);
                 }
-                kirjoittaja.close();
+                writer.close();
         } catch (Exception e) {
             System.out.println(e);
-            pal = false;
+            result = false;
         }
-        return pal;
+        return result;
     }
 
 }
